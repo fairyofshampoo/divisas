@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Divisas (AJAX)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/divisas.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1 id="h1_titulo"></h1>
+    </header>
+    <br><br>
+    <div class="contenido">
+        <div class="contenedormonedas">
+            <img id="img1" class="imagen_moneda">
+            <button class="botonswitch" title="Intercambiar" onclick="intercambiarTipoConversion()"></button>
+            <img id="img2" class="imagen_moneda">
+        </div>
+        <form onsubmit="return convertir(event)">
+            <div class="box">
+                <div class="input__wrapper">
+                    <input id="txt_importe" type="number" placeholder="Introduce el importe a convertir" required
+                        class="input__field" step="any">
+                    <label for="txt_importe" class="input__label">
+                        Importe: *
+                    </label>
+                </div>
+            </div>
+            <br>
+            <div class="box">
+                <div class="input__wrapper">
+                    <input id="txt_tasa" type="text" class="input__field" readonly>
+                    <label for="txt_tasa" class="input__label">
+                        Tasa de cambio: *
+                    </label>
+                </div>
+            </div>
+            <br>
+            <div class="box">
+                <div class="input__wrapper">
+                    <input id="txt_resultado" type="text" readonly class="input__field">
+                    <label for="txt_resultado" class="input__label">
+                        Resultado:
+                    </label>
+                </div>
+            </div>
+            <br><br>
+            <input class="btn_convertir button-glow" type="submit" value="Convertir">
+        </form>
+    </div>
+    <footer>
+        <p>Universidad Veracruzana - Lic. en Ingeniería de Software</p>
+    </footer>
+</body>
+
+</html>
